@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.bk.androidlocation.com.bk.postfinder.MainActivity">
+
+    <RelativeLayout
+            android:layout_width="379dp"
+            android:layout_height="406dp">
+
+        <TextView
+                android:id="@+id/current_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_location"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="11dp"
+                android:layout_gravity="center_horizontal" android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
+
+        <TextView
+                android:id="@+id/latitude_title"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:text="@string/latitude"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center"
+                android:layout_below="@+id/current_location" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+        <TextView
+                android:id="@+id/longitude_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/longitude"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center"
+                android:layout_below="@+id/latitude_title" android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" android:layout_marginTop="15dp"/>
+        <TextView
+                android:id="@+id/latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_text"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center" android:layout_alignBaseline="@+id/latitude_title"
+                android:layout_alignBottom="@+id/latitude_title" android:layout_toRightOf="@+id/latitude_title"
+                android:layout_toEndOf="@+id/latitude_title" android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"/>
+        <TextView
+                android:id="@+id/longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_text"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center"
+                android:layout_alignBaseline="@+id/longitude_title" android:layout_alignBottom="@+id/longitude_title"
+                android:layout_alignLeft="@+id/latitude" android:layout_alignStart="@+id/latitude"/>
+        <Button
+                android:text="@string/button_location_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_location_send"
+                android:layout_marginTop="31dp"
+                android:layout_below="@+id/longitude_title" android:layout_toRightOf="@+id/latitude_title"
+                android:layout_toEndOf="@+id/latitude_title"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_postOffices_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/button_location_send"/>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
